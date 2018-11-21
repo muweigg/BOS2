@@ -19,12 +19,17 @@ import SameContrast from '../pages/same-contrast/same-contrast.vue'
 // 不同公司同时段对比详情
 import DifferentContrast from '../pages/different-contrast/different-contrast.vue'
 
+// 综合数据查询
+import IntegratedDataQuery from '../pages/integrated-data-query/integrated-data-query.vue'
+
 const commandCenter = {path: '/', component: CommandCenter};
 
 const enterpriseDataQuery = {path: 'enterprise-data-query', component: EnterpriseDataQuery};
 const industryDataQuery = {path: 'industry-data-query', component: IndustryDataQuery};
 const sameContrast = {path: 'same-contrast', component: SameContrast};
 const differentContrast = {path: 'different-contrast', component: DifferentContrast};
+
+const integratedDataQuery = {path: 'integrated-data-query', component: IntegratedDataQuery};
 
 const admin = {
   path: '/admin',
@@ -33,7 +38,9 @@ const admin = {
     enterpriseDataQuery,
     industryDataQuery,
     sameContrast,
-    differentContrast
+    differentContrast,
+
+    integratedDataQuery
   ]
 };
 
