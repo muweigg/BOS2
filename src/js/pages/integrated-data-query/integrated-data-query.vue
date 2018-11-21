@@ -17,23 +17,25 @@
     <b-tabs>
       <b-tab title="标准查询" active>
         <div class="filter card-box">
-          <div class="row">
-            <div class="col-12" d-f ai-c fxd-r fxw-w>
 
+          <div class="form-row">
+            <div class="form-group">
               <div class="radio">
                 <input type="radio" id="monthly" :value="0" v-model="queryType" checked>
                 <label for="monthly">
                   月度数据
                 </label>
               </div>
-
+            </div>
+            <div class="form-group">
               <div class="radio">
                 <input type="radio" id="quarter" :value="1" v-model="queryType">
                 <label for="quarter">
                   季度数据
                 </label>
               </div>
-
+            </div>
+            <div class="form-group">
               <div class="radio">
                 <input type="radio" id="year" :value="2" v-model="queryType">
                 <label for="year">
@@ -42,77 +44,82 @@
               </div>
             </div>
           </div>
-          <div class="row m-t-10 m-b-10">
-            <div class="col-12" d-f ai-c fxd-r fxw-w>
 
+          <div class="form-row">
+            <div class="form-group">
               <div class="radio">
                 <input type="radio" id="all-yubei" :value="0" v-model="areaType" checked>
                 <label for="all-yubei">
                   全渝北区
                 </label>
               </div>
-
+            </div>
+            <div class="form-group">
               <div class="radio">
                 <input type="radio" id="xz" :value="1" v-model="areaType">
                 <label for="xz">
                   按行政区
                 </label>
               </div>
-
             </div>
           </div>
-          <div class="row" v-if="areaType === 1">
-            <div class="col-12" d-f ai-c fxd-r fxw-w>
 
+          <div class="form-row" v-if="areaType === 1">
+            <div class="form-group">
               <div class="checkbox">
                 <input id="checkbox0" type="checkbox">
                 <label for="checkbox0" class="m-b-0">
                   两江新区
                 </label>
               </div>
-
+            </div>
+            <div class="form-group">
               <div class="checkbox">
                 <input id="checkbox1" type="checkbox">
                 <label for="checkbox1" class="m-b-0">
                   兴（石船）工业园区
                 </label>
               </div>
-
+            </div>
+            <div class="form-group">
               <div class="checkbox">
                 <input id="checkbox2" type="checkbox">
                 <label for="checkbox2" class="m-b-0">
                   保税港区
                 </label>
               </div>
-
+            </div>
+            <div class="form-group">
               <div class="checkbox">
                 <input id="checkbox3" type="checkbox">
                 <label for="checkbox3" class="m-b-0">
                   前沿科技城
                 </label>
               </div>
-
+            </div>
+            <div class="form-group">
               <div class="checkbox">
                 <input id="checkbox4" type="checkbox">
                 <label for="checkbox4" class="m-b-0">
                   空港工业区
                 </label>
               </div>
-
+            </div>
+            <div class="form-group">
               <div class="checkbox">
                 <input id="checkbox5" type="checkbox">
                 <label for="checkbox5" class="m-b-0">
                   创新经济走廊
                 </label>
               </div>
-
+            </div>
+            <div class="form-group">
               <div class="checkbox">
                 <input id="checkbox6" type="checkbox">
                 <label for="checkbox6" class="m-b-0">
                   农业园区
                 </label>
               </div>
-
             </div>
           </div>
         </div>
@@ -166,47 +173,36 @@
 
                   <div class="form-inline col-12 col-sm-6" d-f jc-fe>
 
-                    <div class="dropdown">
-                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        数据处理
-                      </button>
-                      <ul class="dropdown-menu multi-level dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu">
-                        <li><a href="#" class="dropdown-item">新增指标</a></li>
-                        <li><a href="#" class="dropdown-item">筛选</a></li>
-                        <li class="dropdown-divider"></li>
-                        <li class="dropdown-submenu pull-left">
-                          <a  class="dropdown-item" tabindex="-1" href="#">统计</a>
-                          <ul class="dropdown-menu">
-                            <li class="dropdown-submenu pull-left">
-                              <a class="dropdown-item" href="#">对行运算</a>
-                              <ul class="dropdown-menu">
-                                <li><a href="#" class="dropdown-item">SUM求和</a></li>
-                                <li><a href="#" class="dropdown-item">x平均值</a></li>
-                                <li><a href="#" class="dropdown-item">Co计数</a></li>
-                                <li><a href="#" class="dropdown-item">MAX最大值</a></li>
-                                <li><a href="#" class="dropdown-item">MIN最小值</a></li>
-                              </ul>
-                            </li>
-                            <li class="dropdown-divider"></li>
-                            <li><a tabindex="-1" href="#" class="dropdown-item">对列运算</a></li>
-                          </ul>
-                        </li>
-                        <li class="dropdown-divider"></li>
-                        <li><a href="#" class="dropdown-item">恢复</a></li>
-                        <li><a href="#" class="dropdown-item">去除空行空列</a></li>
+                    <b-dd text="数据处理" right>
+                      <b-dd-item>新增指标</b-dd-item>
+                      <b-dd-item>筛选</b-dd-item>
+                      <b-dd-divider></b-dd-divider>
+                      <b-dd-item class="submenu">
+                        统计
+                        <div class="dropdown-menu pull-left">
+                          <b-dd-item class="submenu">
+                            对行运算
+                            <div class="dropdown-menu pull-left">
+                              <b-dd-item>SUM求和</b-dd-item>
+                              <b-dd-item>x平均值</b-dd-item>
+                              <b-dd-item>Co计数</b-dd-item>
+                              <b-dd-item>MAX最大值</b-dd-item>
+                              <b-dd-item>MIN最小值</b-dd-item>
+                            </div>
+                          </b-dd-item>
+                          <b-dd-divider></b-dd-divider>
+                          <b-dd-item>对列运算</b-dd-item>
+                        </div>
+                      </b-dd-item>
+                      <b-dd-divider></b-dd-divider>
+                      <b-dd-item>恢复</b-dd-item>
+                      <b-dd-item>去除空行空列</b-dd-item>
+                    </b-dd>
 
-                      </ul>
-                    </div>
-
-                    <div class="btn-group ml-3">
-                      <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        表格处理
-                      </button>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <a href="javascript:" class="dropdown-item">转置</a>
-                        <a href="javascript:" class="dropdown-item">恢复默认</a>
-                      </div>
-                    </div>
+                    <b-dd text="表格处理" right class="ml-3">
+                      <b-dd-item>转置</b-dd-item>
+                      <b-dd-item>恢复默认</b-dd-item>
+                    </b-dd>
 
                   </div>
 
@@ -335,23 +331,25 @@
         </div>
 
         <div class="filter card-box">
-          <div class="row">
-            <div class="col-12" d-f ai-c fxd-r fxw-w>
 
+          <div class="form-row">
+            <div class="form-group">
               <div class="radio">
                 <input type="radio" id="monthly" :value="0" v-model="queryType" checked>
                 <label for="monthly">
                   月度数据
                 </label>
               </div>
-
+            </div>
+            <div class="form-group">
               <div class="radio">
                 <input type="radio" id="quarter" :value="1" v-model="queryType">
                 <label for="quarter">
                   季度数据
                 </label>
               </div>
-
+            </div>
+            <div class="form-group">
               <div class="radio">
                 <input type="radio" id="year" :value="2" v-model="queryType">
                 <label for="year">
@@ -360,77 +358,82 @@
               </div>
             </div>
           </div>
-          <div class="row m-t-10 m-b-10">
-            <div class="col-12" d-f ai-c fxd-r fxw-w>
 
+          <div class="form-row">
+            <div class="form-group">
               <div class="radio">
                 <input type="radio" id="all-yubei" :value="0" v-model="areaType" checked>
                 <label for="all-yubei">
                   全渝北区
                 </label>
               </div>
-
+            </div>
+            <div class="form-group">
               <div class="radio">
                 <input type="radio" id="xz" :value="1" v-model="areaType">
                 <label for="xz">
                   按行政区
                 </label>
               </div>
-
             </div>
           </div>
-          <div class="row" v-if="areaType === 1">
-            <div class="col-12" d-f ai-c fxd-r fxw-w>
 
+          <div class="form-row" v-if="areaType === 1">
+            <div class="form-group">
               <div class="checkbox">
                 <input id="checkbox0" type="checkbox">
                 <label for="checkbox0" class="m-b-0">
                   两江新区
                 </label>
               </div>
-
+            </div>
+            <div class="form-group">
               <div class="checkbox">
                 <input id="checkbox1" type="checkbox">
                 <label for="checkbox1" class="m-b-0">
                   兴（石船）工业园区
                 </label>
               </div>
-
+            </div>
+            <div class="form-group">
               <div class="checkbox">
                 <input id="checkbox2" type="checkbox">
                 <label for="checkbox2" class="m-b-0">
                   保税港区
                 </label>
               </div>
-
+            </div>
+            <div class="form-group">
               <div class="checkbox">
                 <input id="checkbox3" type="checkbox">
                 <label for="checkbox3" class="m-b-0">
                   前沿科技城
                 </label>
               </div>
-
+            </div>
+            <div class="form-group">
               <div class="checkbox">
                 <input id="checkbox4" type="checkbox">
                 <label for="checkbox4" class="m-b-0">
                   空港工业区
                 </label>
               </div>
-
+            </div>
+            <div class="form-group">
               <div class="checkbox">
                 <input id="checkbox5" type="checkbox">
                 <label for="checkbox5" class="m-b-0">
                   创新经济走廊
                 </label>
               </div>
-
+            </div>
+            <div class="form-group">
               <div class="checkbox">
                 <input id="checkbox6" type="checkbox">
                 <label for="checkbox6" class="m-b-0">
                   农业园区
                 </label>
               </div>
-
             </div>
           </div>
         </div>
