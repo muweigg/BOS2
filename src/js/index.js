@@ -7,4 +7,4 @@ import BootstrapVue from 'bootstrap-vue'
 
 Vue.use(BootstrapVue);
 
-new Vue({ router, store }).$mount('#app')
+new Vue({ router, store }).$mount('#app');

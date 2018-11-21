@@ -147,6 +147,16 @@ module.exports = function (options) {
             ...fileUtils.getHTMLPlugin(),
             ...spritesmithConfig,
             // new BundleAnalyzerPlugin(),
+            new CopyPlugin([
+              {
+                from: helpers.root('src/js/common/third-party/ubold/modernizr.min.js'),
+                to: 'assets/js/common/ubold/'
+              },
+              {
+                from: helpers.root('src/js/common/third-party/ubold/jquery.app.js'),
+                to: 'assets/js/common/ubold/'
+              }
+            ]),
         ]
     }
 }

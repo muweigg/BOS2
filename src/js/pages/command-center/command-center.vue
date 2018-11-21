@@ -722,10 +722,12 @@
 </template>
 
 <script>
-  import {timer, fromEvent} from 'rxjs';
-  import {map, take} from 'rxjs/operators';
+  import {timer, Subject} from 'rxjs';
+  import {map, takeUntil} from 'rxjs/operators';
   import * as Echarts from 'echarts';
   import BMapConfig from './custom_map_config.json';
+
+  const destroyManager = new Subject();
 
   const methods = {
     // 百度地图
@@ -1042,9 +1044,13 @@
         tabIndex: 0,
       }
     },
+    beforeDestroy () {
+      destroyManager.next(true);
+    },
     mounted() {
       timer(0, 1000).pipe(
-        map(count => new Date().format('MM-dd hh:mm:ss'))
+        map(count => new Date().format('MM-dd hh:mm:ss')),
+        takeUntil(destroyManager)
       ).subscribe(time => this.systemTime = time);
 
       this.initEconomicIndexChart();
