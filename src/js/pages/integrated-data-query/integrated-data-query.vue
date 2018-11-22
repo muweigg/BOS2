@@ -146,28 +146,19 @@
 
                     <div class="form-group ml-3">时段选择：</div>
                     <div class="form-group">
-
-
-                      <div class="btn-group">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          表格处理
-                        </button>
-                        <div class="dropdown-menu">
-                          <a href="javascript:" class="dropdown-item">2018年2季度</a>
-                          <a href="javascript:" class="dropdown-item">2018年1季度</a>
-                          <a href="javascript:" class="dropdown-item">2017年4季度</a>
-                          <a href="javascript:" class="dropdown-item">2017年3季度</a>
-                          <a href="javascript:" class="dropdown-item">2017年2季度</a>
-                          <div class="dropdown-item">
-                            <input type="text" class="form-control" @focus="toggleShowTips" @blur="toggleShowTips">
-                            <button class="btn btn-secondary">确认</button>
-                            <div class="card-box tips" v-if="isShowTips">
-                              <p><span>例：输入格式如下</span></p><p><span>月：201801，201805</span></p><p><span>季：2012A，2012B</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; 2012C，2012D</span></p><p><span>年：2012，2013</span></p><p><span>其他：2013-，last10</span></p>
-                            </div>
+                      <b-dd text="数据处理" right>
+                        <b-dd-item>2018年2季度</b-dd-item>
+                        <b-dd-item>2018年1季度</b-dd-item>
+                        <b-dd-item>2017年4季度</b-dd-item>
+                        <b-dd-item>2017年3季度</b-dd-item>
+                        <b-dd-item @click.stop.prevent="">
+                          <input type="text" class="form-control" @focus="toggleShowTips" @blur="toggleShowTips">
+                          <button class="btn btn-secondary">确认</button>
+                          <div class="card-box tips" v-if="isShowTips">
+                            <p><span>例：输入格式如下</span></p><p><span>月：201801，201805</span></p><p><span>季：2012A，2012B</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; 2012C，2012D</span></p><p><span>年：2012，2013</span></p><p><span>其他：2013-，last10</span></p>
                           </div>
-                        </div>
-                      </div>
-
+                        </b-dd-item>
+                      </b-dd>
                     </div>
                   </div>
 

@@ -686,34 +686,34 @@
     <b-modal id="goto-system-modal" hide-header hide-footer>
       <div class="row">
         <div class="col-4">
-          <a href="custom-query-template.html">
+          <router-link to="./admin/custom-query-template">
             <i class="fa fa-bar-chart-o"></i><br>
             自定义查询模板
-          </a>
+          </router-link>
         </div>
         <div class="col-4">
-          <a href="custom-statistics-template.html">
+          <router-link to="./admin/custom-statistics-template">
             <i class="fa fa-bar-chart-o"></i><br>
             自定义统计模板
-          </a>
+          </router-link>
         </div>
         <div class="col-4">
-          <a href="custom-report-template.html">
+          <router-link to="./admin/custom-report-template">
             <i class="fa fa-bar-chart-o"></i><br>
             自定义报告模板
-          </a>
+          </router-link>
         </div>
         <div class="col-4">
-          <a href="integrated-data-query.html">
+          <router-link to="./admin/integrated-data-query">
             <i class="fa fa-bar-chart-o"></i><br>
             综合数据查询
-          </a>
+          </router-link>
         </div>
         <div class="col-4">
-          <a href="enterprise-data-query.html">
+          <router-link to="./admin/enterprise-data-query">
             <i class="fa fa-bar-chart-o"></i><br>
             企业数据查询
-          </a>
+          </router-link>
         </div>
       </div>
     </b-modal>
