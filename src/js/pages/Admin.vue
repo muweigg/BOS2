@@ -48,7 +48,9 @@
               <a href="javascript:void(0);" class="waves-effect"><i class="ti-home"></i> <span> 数据指挥中心平台 </span> <span
                 class="menu-arrow"></span></a>
               <ul class="list-unstyled">
-                <li><a href="index.html" target="_blank">数据指挥中心平台</a></li>
+                <li>
+                  <router-link to="/" target="_blank">数据指挥中心平台</router-link>
+                </li>
               </ul>
             </li>
 
@@ -56,9 +58,21 @@
               <a href="javascript:void(0);" class="waves-effect"><i class="ti-home"></i> <span> 大数据分析管理平台 </span> <span
                 class="menu-arrow"></span></a>
               <ul class="list-unstyled">
-                <li><a href="custom-query-template.html">自定义查询模板</a></li>
-                <li><a href="custom-statistics-template.html">自定义统计模板</a></li>
-                <li><a href="custom-report-template.html">自定义报告模板</a></li>
+                <li>
+                  <router-link tag="li" to="./custom-query-template" active-class="active">
+                    <a href="javascript:">自定义查询模板</a>
+                  </router-link>
+                </li>
+                <li>
+                  <router-link tag="li" to="./custom-statistics-template" active-class="active">
+                    <a href="javascript:">自定义统计模板</a>
+                  </router-link>
+                </li>
+                <li>
+                  <router-link tag="li" to="./custom-report-template" active-class="active">
+                    <a href="javascript:">自定义报告模板</a>
+                  </router-link>
+                </li>
               </ul>
             </li>
 

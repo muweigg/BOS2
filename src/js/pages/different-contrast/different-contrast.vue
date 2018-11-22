@@ -71,7 +71,6 @@
 </template>
 
 <script>
-  import {DIFFERENT_CONTRAST_IN, DIFFERENT_CONTRAST_OUT} from '../../store';
   import {fromEvent} from 'rxjs';
   import {map} from 'rxjs/operators';
 

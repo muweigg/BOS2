@@ -22,6 +22,12 @@ import DifferentContrast from '../pages/different-contrast/different-contrast.vu
 // 综合数据查询
 import IntegratedDataQuery from '../pages/integrated-data-query/integrated-data-query.vue'
 
+// 自定义报告模板
+import CustomReportTemplate from '../pages/custom-report-template/custom-report-template.vue'
+
+// 创建模板
+import CreateTemplate from '../pages/create-template/create-template.vue'
+
 const commandCenter = {path: '/', component: CommandCenter};
 
 const enterpriseDataQuery = {path: 'enterprise-data-query', component: EnterpriseDataQuery};
@@ -30,6 +36,9 @@ const sameContrast = {path: 'same-contrast', component: SameContrast};
 const differentContrast = {path: 'different-contrast', component: DifferentContrast};
 
 const integratedDataQuery = {path: 'integrated-data-query', component: IntegratedDataQuery};
+
+const customReportTemplate = {path: 'custom-report-template', component: CustomReportTemplate};
+const createTemplate = {path: 'create-template', component: CreateTemplate};
 
 const admin = {
   path: '/admin',
@@ -40,7 +49,10 @@ const admin = {
     sameContrast,
     differentContrast,
 
-    integratedDataQuery
+    integratedDataQuery,
+
+    customReportTemplate,
+    createTemplate
   ]
 };
 

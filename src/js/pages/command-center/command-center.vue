@@ -4,7 +4,7 @@
     <h4 class="title"><img src="../../../assets/images/logo.png" alt="">渝北区数据指挥中心平台</h4>
 
     <div class="left-data-area">
-      <div class="l-t-1" :class="{ 'mw-expand': isLt1Open }" v-cloak>
+      <div class="l-t-1" :class="{ 'mw-expand': isLt1Open }">
         <h5 v-show="!isLt1Open">
           <strong @click="isLt1Open = true">
             <i class="fa fa-plus"></i>
@@ -126,7 +126,7 @@
         </div>
       </div>
 
-      <div class="l-t-2" :class="{ 'mw-expand': isLt2Open }" v-cloak>
+      <div class="l-t-2" :class="{ 'mw-expand': isLt2Open }">
         <h5 v-show="!isLt2Open">
           <strong @click="isLt2Open = true">
             <i class="fa fa-plus"></i>
@@ -144,7 +144,7 @@
     </div>
 
     <div class="right-data-area">
-      <div class="r-t-1" :class="{ 'mw-expand': isRt1Open }" v-cloak>
+      <div class="r-t-1" :class="{ 'mw-expand': isRt1Open }">
         <h5 v-show="!isRt1Open">
           <strong @click="isRt1Open = true">
             <i class="fa fa-plus"></i>
@@ -196,7 +196,7 @@
         </div>
       </div>
 
-      <div class="r-t-2" :class="{ 'mw-expand': isRt2Open }" v-cloak>
+      <div class="r-t-2" :class="{ 'mw-expand': isRt2Open }">
         <h5 v-show="!isRt2Open">
           <strong @click="isRt2Open = true">
             <i class="fa fa-plus"></i>
@@ -211,7 +211,7 @@
         <div ref="indexRadarChart" class="radar-chart" v-show="isRt2Open"></div>
       </div>
 
-      <div class="r-t-3" :class="{ 'mw-expand': isRt3Open }" v-cloak>
+      <div class="r-t-3" :class="{ 'mw-expand': isRt3Open }">
         <h5 v-show="!isRt3Open">
           <strong @click="isRt3Open = true">
             <i class="fa fa-plus"></i>
@@ -686,31 +686,31 @@
     <b-modal id="goto-system-modal" hide-header hide-footer>
       <div class="row">
         <div class="col-4">
-          <router-link to="./admin/custom-query-template">
+          <router-link target="_blank" to="./admin/custom-query-template">
             <i class="fa fa-bar-chart-o"></i><br>
             自定义查询模板
           </router-link>
         </div>
         <div class="col-4">
-          <router-link to="./admin/custom-statistics-template">
+          <router-link target="_blank" to="./admin/custom-statistics-template">
             <i class="fa fa-bar-chart-o"></i><br>
             自定义统计模板
           </router-link>
         </div>
         <div class="col-4">
-          <router-link to="./admin/custom-report-template">
+          <router-link target="_blank" to="./admin/custom-report-template">
             <i class="fa fa-bar-chart-o"></i><br>
             自定义报告模板
           </router-link>
         </div>
         <div class="col-4">
-          <router-link to="./admin/integrated-data-query">
+          <router-link target="_blank" to="./admin/integrated-data-query">
             <i class="fa fa-bar-chart-o"></i><br>
             综合数据查询
           </router-link>
         </div>
         <div class="col-4">
-          <router-link to="./admin/enterprise-data-query">
+          <router-link target="_blank" to="./admin/enterprise-data-query">
             <i class="fa fa-bar-chart-o"></i><br>
             企业数据查询
           </router-link>
