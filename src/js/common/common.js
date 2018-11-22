@@ -1,8 +1,8 @@
 import '../../css/common/common.scss';
 
 import 'script-loader!babel-loader!./third-party/ubold/jquery.min';
-// import 'script-loader!babel-loader!./third-party/ubold/popper.min';
-// import 'script-loader!babel-loader!./third-party/ubold/bootstrap.min';
+import 'script-loader!babel-loader!./third-party/ubold/popper.min';
+import 'script-loader!babel-loader!./third-party/ubold/bootstrap.min';
 import 'script-loader!babel-loader!./third-party/ubold/wow.min';
 // import 'script-loader!babel-loader!./third-party/ubold/jquery.scrollTo.min';
 // import 'script-loader!babel-loader!./third-party/ubold/morris/morris.min';
