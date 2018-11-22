@@ -22,6 +22,12 @@ import DifferentContrast from '../pages/different-contrast/different-contrast.vu
 // 综合数据查询
 import IntegratedDataQuery from '../pages/integrated-data-query/integrated-data-query.vue'
 
+// 自定义查询模板
+import CustomQueryTemplate from '../pages/custom-query-template/custom-query-template.vue'
+
+// 自定义统计模板
+import CustomStatisticsTemplate from '../pages/custom-statistics-template/custom-statistics-template.vue'
+
 // 自定义报告模板
 import CustomReportTemplate from '../pages/custom-report-template/custom-report-template.vue'
 
@@ -37,6 +43,8 @@ const differentContrast = {path: 'different-contrast', component: DifferentContr
 
 const integratedDataQuery = {path: 'integrated-data-query', component: IntegratedDataQuery};
 
+const customQueryTemplate = {path: 'custom-query-template', component: CustomQueryTemplate};
+const customStatisticsTemplate = {path: 'custom-statistics-template', component: CustomStatisticsTemplate};
 const customReportTemplate = {path: 'custom-report-template', component: CustomReportTemplate};
 const createTemplate = {path: 'create-template', component: CreateTemplate};
 
@@ -51,6 +59,8 @@ const admin = {
 
     integratedDataQuery,
 
+    customQueryTemplate,
+    customStatisticsTemplate,
     customReportTemplate,
     createTemplate
   ]
