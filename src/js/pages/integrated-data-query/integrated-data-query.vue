@@ -1,19 +1,6 @@
 <template>
   <div class="container-fluid integrated-data-query">
 
-    <!--<ul class="nav nav-tabs">-->
-      <!--<li class="nav-item">-->
-        <!--<a href="#standard-query" data-toggle="tab" aria-expanded="true" class="nav-link active">-->
-          <!--标准查询-->
-        <!--</a>-->
-      <!--</li>-->
-      <!--<li class="nav-item">-->
-        <!--<a href="#custom-query" data-toggle="tab" aria-expanded="false" class="nav-link">-->
-          <!--自定义查询-->
-        <!--</a>-->
-      <!--</li>-->
-    <!--</ul>-->
-
     <b-tabs>
       <b-tab title="标准查询" active>
         <div class="filter card-box">
@@ -591,11 +578,6 @@
       this.initTree();
     },
     methods: {
-      block (e) {
-        e.stopPropagation();
-        e.preventDefault();
-        console.log('block');
-      },
       initTree () {
 
         const queryData = [
@@ -634,11 +616,6 @@
         ];
 
         $('.query-tree').jstree({core: { data: queryData }});
-
-        // $('.submenu').click((e) => {
-        //   e.stopPropagation();
-        //   e.preventDefault();
-        // });
       },
 
       toggleShowTips () {
