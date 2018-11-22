@@ -126,8 +126,7 @@
   export default {
     name: 'Admin',
     mounted() {
-      import('script-loader!babel-loader!../common/third-party/ubold/jquery.app');
-      // loadScript('bapp', './assets/js/common/ubold/jquery.app.js', 'body');
+      loadScript('bapp', './assets/js/common/ubold/jquery.app.js', 'body');
     },
     methods: {}
   }
