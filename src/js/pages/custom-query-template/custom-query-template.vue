@@ -202,7 +202,7 @@
       </div>
       <div class="col-6" d-f fxd-c>
         <div class="card-box" fx-auto>
-          <h4 class="header-title">
+          <h4 class="header-title m-t-0 m-b-15">
             原生SQL编辑区：
           </h4>
           <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
