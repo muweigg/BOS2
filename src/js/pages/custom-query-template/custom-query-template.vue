@@ -177,9 +177,58 @@
       </div>
     </div>
 
-    <div class="card-box">
-
+    <div class="row" d-f ai-s>
+      <div class="col-6" d-f fxd-c>
+        <div class="card-box" fx-auto>
+          <h4 class="header-title m-t-0 m-b-15">
+            请选择条件与关系：
+            <b-btn variant="secondary">A</b-btn>
+            <b-btn variant="secondary">B</b-btn>
+            <b-btn variant="secondary">C</b-btn>
+            <b-btn variant="secondary">and</b-btn>
+            <b-btn variant="secondary">or</b-btn>
+          </h4>
+          <div class="form-group form-inline">
+            <input type="text" class="form-control m-r-10" value="A and B and C">
+            <b-btn variant="primary" class="m-r-10">生成查询</b-btn>
+            <b-btn variant="secondary" v-b-modal.save-template-modal>保存为模板</b-btn>
+          </div>
+          <div>
+            if “入职登记表” “性别” “=” 值 “女” <br>
+            And “工资表” “籍贯” “!=” “入职登记表” “籍贯” <br>
+            And “工资表” “工资” “包含于” 值 “5000—10000”
+          </div>
+        </div>
+      </div>
+      <div class="col-6" d-f fxd-c>
+        <div class="card-box" fx-auto>
+          <h4 class="header-title">
+            原生SQL编辑区：
+          </h4>
+          <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+          <div class="text-right m-t-15">
+            <b-btn variant="primary">执行</b-btn>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <b-modal id="save-template-modal" title="保存模板" ref="saveTemplateModal">
+      <div class="row">
+        <div class="col-12">
+
+          <div class="form-group form-inline">
+            <label>我的模板：</label>
+            <input type="text" class="form-control">
+          </div>
+
+        </div>
+      </div>
+      <template slot="modal-footer">
+        <b-btn @click="$refs.saveTemplateModal.hide()">取消</b-btn>
+        <b-btn variant="primary">确定</b-btn>
+      </template>
+    </b-modal>
 
   </div>
 </template>
