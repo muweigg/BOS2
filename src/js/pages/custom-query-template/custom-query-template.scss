@@ -1,6 +1,31 @@
 .custom-query-template {
 
+  .conditions {
+
+    .form-group {
+
+      > * {
+        margin-right: 10px;
+
+        &:nth-last-child(1) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
   .group-by {
     border-top-style: dashed !important;
+
+    .form-group {
+
+      > * {
+        margin-right: 10px;
+
+        &:nth-child(1), &:nth-last-child(1) {
+          margin-right: 0;
+        }
+      }
+    }
   }
 }

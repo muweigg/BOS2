@@ -40,14 +40,138 @@
     <div class="card-box">
       <div class="conditions">
         <div class="row">
-
+          <div class="col-12">
+            <div class="form-group form-inline">
+              A、
+              <input type="text" readonly value="入职登记表" class="form-control">
+              <select name="" class="form-control">
+                <option value="0">性别</option>
+                <option value="1">籍贯</option>
+              </select>
+              <select name="" class="form-control">
+                <option value="0">=</option>
+                <option value="1">!=</option>
+                <option value="2">&gt;</option>
+                <option value="3">&gt;=</option>
+                <option value="4">&lt;</option>
+                <option value="5">&lt;=</option>
+                <option value="6">in</option>
+                <option value="7">包含于</option>
+                <option value="8">不包含于</option>
+              </select>
+              <select name="" class="form-control">
+                <option value="0">值</option>
+                <option value="1">表单</option>
+              </select>
+              <input type="text" value="女" class="form-control">
+              <a href="javascript:">添加条件</a>
+              <a href="javascript:">删除</a>
+            </div>
+            <div class="form-group form-inline">
+              B、
+              <input type="text" readonly value="工资表" class="form-control">
+              <select name="" class="form-control">
+                <option value="0">性别</option>
+                <option value="1" selected>籍贯</option>
+              </select>
+              <select name="" class="form-control">
+                <option value="0">=</option>
+                <option value="1" selected>!=</option>
+                <option value="2">&gt;</option>
+                <option value="3">&gt;=</option>
+                <option value="4">&lt;</option>
+                <option value="5">&lt;=</option>
+                <option value="6">in</option>
+                <option value="7">包含于</option>
+                <option value="8">不包含于</option>
+              </select>
+              <select name="" class="form-control">
+                <option value="0">值</option>
+                <option value="1" selected>表单</option>
+              </select>
+              <input type="text" readonly value="入职登记表" class="form-control">
+              <select name="" class="form-control">
+                <option value="0">性别</option>
+                <option value="1" selected>籍贯</option>
+              </select>
+              <a href="javascript:">添加条件</a>
+              <a href="javascript:">删除</a>
+            </div>
+            <div class="form-group form-inline">
+              C、
+              <input type="text" readonly value="工资表" class="form-control">
+              <select name="" class="form-control">
+                <option value="0">工资</option>
+              </select>
+              <select name="" class="form-control">
+                <option value="0">=</option>
+                <option value="1">!=</option>
+                <option value="2">&gt;</option>
+                <option value="3">&gt;=</option>
+                <option value="4">&lt;</option>
+                <option value="5">&lt;=</option>
+                <option value="6">in</option>
+                <option value="7" selected>包含于</option>
+                <option value="8">不包含于</option>
+              </select>
+              <select name="" class="form-control">
+                <option value="0">值</option>
+                <option value="1">表单</option>
+              </select>
+              <span class="range">
+                <input type="text" class="form-control" value="5000">
+                ---
+                <input type="text" class="form-control" value="10000">
+              </span>
+              <a href="javascript:">添加条件</a>
+              <a href="javascript:">删除</a>
+            </div>
+            <div class="form-group form-inline">
+              D、
+              <input type="text" readonly value="工资表" class="form-control">
+              <select name="" class="form-control">
+                <option value="0">性别</option>
+                <option value="1" selected>籍贯</option>
+              </select>
+              <select name="" class="form-control">
+                <option value="0">=</option>
+                <option value="1">!=</option>
+                <option value="2">&gt;</option>
+                <option value="3">&gt;=</option>
+                <option value="4">&lt;</option>
+                <option value="5">&lt;=</option>
+                <option value="6" selected>in</option>
+                <option value="7">包含于</option>
+                <option value="8">不包含于</option>
+              </select>
+              <select name="" class="form-control">
+                <option value="0">值</option>
+                <option value="1">表单</option>
+              </select>
+              <input type="text" value="重庆" class="form-control">
+              <a href="javascript:">添加条件</a>
+              <a href="javascript:">删除</a>
+            </div>
+          </div>
         </div>
       </div>
       <div class="group-by border-top border-secondary">
         <div class="row">
           <div class="col-12">
-            <b-form-checkbox v-model="groupBy" button-variant="secondary">123
-            </b-form-checkbox>
+            <div class="form-group form-inline m-t-15 m-b-0">
+              <div class="checkbox">
+                <input id="group-by" type="checkbox">
+                <label for="group-by" class="m-b-0">&nbsp;</label>
+              </div>
+              <span>Group By</span>
+              <input type="text" readonly value="工资表" class="form-control">
+              <select name="" class="form-control">
+                <option value="0">性别</option>
+                <option value="1">籍贯</option>
+                <option value="2" selected>工资</option>
+              </select>
+              <a href="javascript:">继续添加</a>
+            </div>
           </div>
         </div>
       </div>
@@ -64,9 +188,7 @@
   export default {
     name: 'custom-query-template',
     data () {
-      return {
-        groupBy: []
-      }
+      return {}
     }
   }
 </script>
