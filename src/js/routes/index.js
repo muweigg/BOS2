@@ -1,11 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import store from '../store'
 
 // 指挥中心
 import CommandCenter from '../pages/command-center/command-center.vue'
 
 // Admin root
 import Admin from '../pages/Admin.vue'
+
+// Login
+import Login from '../pages/login/login.vue'
 
 // 企业数据查询
 import EnterpriseDataQuery from '../pages/enterprise-data-query/enterprise-data-query.vue'
@@ -33,6 +37,8 @@ import CustomReportTemplate from '../pages/custom-report-template/custom-report-
 
 // 创建模板
 import CreateTemplate from '../pages/create-template/create-template.vue'
+
+const login = {path: '/login', component: Login};
 
 const commandCenter = {path: '/', component: CommandCenter};
 
@@ -63,11 +69,15 @@ const admin = {
     customStatisticsTemplate,
     customReportTemplate,
     createTemplate
-  ]
+  ],
+  beforeEnter (to, from , next) {
+    if (!store.state.isLogged) next('/login');
+    next();
+  }
 };
 
 const routes = [
-  commandCenter, admin,
+  commandCenter, admin, login,
   {path: '*', redirect: '/'}
 ];
 
