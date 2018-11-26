@@ -6,7 +6,7 @@
       <!-- LOGO -->
       <div class="topbar-left">
         <div class="text-center">
-          <router-link to="/" class="logo">
+          <router-link to="/" target="_blank" class="logo">
             <i class="icon-magnet icon-c-logo"></i>
             <span>Ub<i class="md md-album"></i>ld</span>
           </router-link>

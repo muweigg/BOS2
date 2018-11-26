@@ -64,7 +64,8 @@
     methods: {
       login () {
         this.$store.commit(LOGGED);
-        this.$router.push('/admin/custom-query-template');
+        const path = this.$store.state.toURL;
+        this.$router.push((path));
       }
     }
   }

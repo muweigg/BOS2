@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import store from '../store'
+import {UPDATE_URL} from '../store/mutation-types'
 
 // 指挥中心
 import CommandCenter from '../pages/command-center/command-center.vue'
@@ -71,7 +72,10 @@ const admin = {
     createTemplate
   ],
   beforeEnter (to, from , next) {
-    if (!store.state.isLogged) next('/login');
+    if (!store.state.isLogged) {
+      store.commit(UPDATE_URL, to.path);
+      next('/login');
+    }
     next();
   }
 };

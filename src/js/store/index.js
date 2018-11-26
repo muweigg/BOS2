@@ -7,7 +7,8 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    isLogged: false
+    isLogged: false,
+    toURL: '/admin/custom-query-template',
   },
   mutations
 })

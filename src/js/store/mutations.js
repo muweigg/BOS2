@@ -1,5 +1,5 @@
 import {
-  LOGGED, LOGGED_OUT, DIFFERENT_CONTRAST_IN, DIFFERENT_CONTRAST_OUT
+  LOGGED, LOGGED_OUT, UPDATE_URL
 } from './mutation-types';
 
 const mutations = {
@@ -11,6 +11,10 @@ const mutations = {
   [LOGGED_OUT](state) {
     state.isLogged = false
   },
+
+  [UPDATE_URL](state, payload) {
+    state.toURL = payload;
+  }
 };
 
 export default mutations;
