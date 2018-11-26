@@ -28,4 +28,46 @@
       }
     }
   }
+
+  #export-index-modal {
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+
+        a.active {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .brn-wrap {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      /deep/ button {
+        margin: 5px 0;
+      }
+    }
+
+    .card-box {
+      padding: 0;
+
+      .table {
+
+        th {
+          vertical-align: middle;
+        }
+      }
+
+      /deep/ .custom-control-label {
+        padding-left: 20px !important;
+      }
+    }
+  }
 }

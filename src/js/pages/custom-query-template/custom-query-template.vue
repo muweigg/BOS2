@@ -190,7 +190,7 @@
           </h4>
           <div class="form-group form-inline">
             <input type="text" class="form-control m-r-10" value="A and B and C">
-            <b-btn variant="primary" class="m-r-10">生成查询</b-btn>
+            <b-btn variant="primary" class="m-r-10" v-b-modal.export-index-modal>生成查询</b-btn>
             <b-btn variant="secondary" v-b-modal.save-template-modal>保存为模板</b-btn>
           </div>
           <div>
@@ -230,19 +230,75 @@
       </template>
     </b-modal>
 
-    <b-modal id="save-template-modal" title="导出指标设定" ref="saveTemplateModal">
+    <b-modal id="export-index-modal" size="lg" title="导出指标设定" ref="exportIndexModal">
       <div class="row">
-        <div class="col-12">
-
-          <div class="form-group form-inline">
-            <label>我的模板：</label>
-            <input type="text" class="form-control">
+        <div class="col-2">
+          <ul>
+            <li><a href="javascript:" class="active">入职表</a></li>
+            <li><a href="javascript:">工资表</a></li>
+            <li><a href="javascript:">体检表</a></li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <div class="card-box m-b-0">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th><b-form-checkbox class="p-0">全选</b-form-checkbox></th>
+                  <th>字段名称</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <b-form-checkbox class="p-0"></b-form-checkbox>
+                  </td>
+                  <td>工号</td>
+                </tr>
+                <tr>
+                  <td>
+                    <b-form-checkbox class="p-0"></b-form-checkbox>
+                  </td>
+                  <td>性别</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-
+        </div>
+        <div class="col-1" pos-r>
+          <div class="brn-wrap">
+            <b-btn><i class="ion-ios7-arrow-forward"></i></b-btn>
+            <b-btn><i class="ion-ios7-arrow-back"></i></b-btn>
+          </div>
+        </div>
+        <div class="col-5">
+          <div class="card-box m-b-0">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th><b-form-checkbox class="p-0">全选</b-form-checkbox></th>
+                  <th>字段名称</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <b-form-checkbox class="p-0"></b-form-checkbox>
+                  </td>
+                  <td>入职表 - 工号</td>
+                </tr>
+                <tr>
+                  <td>
+                    <b-form-checkbox class="p-0"></b-form-checkbox>
+                  </td>
+                  <td>入职表 - 性别</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
       <template slot="modal-footer">
-        <b-btn @click="$refs.saveTemplateModal.hide()">取消</b-btn>
         <b-btn variant="primary">生成表格</b-btn>
       </template>
     </b-modal>
