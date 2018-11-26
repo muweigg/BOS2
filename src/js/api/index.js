@@ -2,7 +2,7 @@ import axios from 'axios'
 import store from '../store'
 import {LOGGED_OUT} from '../store/mutation-types'
 
-const BASE_URL = 'http://45.40.254.149:9100';
+export const BASE_URL = 'http://45.40.254.149:9100';
 
 axios.defaults.withCredentials = true;
 
