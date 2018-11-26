@@ -3,6 +3,13 @@ import VueRouter from 'vue-router'
 import store from '../store'
 import {UPDATE_URL} from '../store/mutation-types'
 
+const beforeEnter = (to, from, next) => {
+  if (!store.state.isLogged) {
+    store.commit(UPDATE_URL, to.path);
+    next('/');
+  } else next();
+};
+
 // 指挥中心
 import CommandCenter from '../pages/command-center/command-center.vue'
 
@@ -39,9 +46,9 @@ import CustomReportTemplate from '../pages/custom-report-template/custom-report-
 // 创建模板
 import CreateTemplate from '../pages/create-template/create-template.vue'
 
-const login = {path: '/login', component: Login};
+const login = {path: '/', component: Login};
 
-const commandCenter = {path: '/', component: CommandCenter};
+const commandCenter = {path: '/command-center', component: CommandCenter, beforeEnter};
 
 const enterpriseDataQuery = {path: 'enterprise-data-query', component: EnterpriseDataQuery};
 const industryDataQuery = {path: 'industry-data-query', component: IndustryDataQuery};
@@ -71,20 +78,16 @@ const admin = {
     customReportTemplate,
     createTemplate
   ],
-  beforeEnter (to, from , next) {
-    if (!store.state.isLogged) {
-      store.commit(UPDATE_URL, to.path);
-      next('/login');
-    }
-    next();
-  }
+  beforeEnter
 };
 
 const routes = [
-  commandCenter, admin, login,
+  login,
+  commandCenter,
+  admin,
   {path: '*', redirect: '/'}
 ];
 
 Vue.use(VueRouter);
 
-export default new VueRouter({routes})
+export default new VueRouter({routes});

@@ -6,7 +6,7 @@
       <!-- LOGO -->
       <div class="topbar-left">
         <div class="text-center">
-          <router-link to="/" target="_blank" class="logo">
+          <router-link to="/" class="logo">
             <i class="icon-magnet icon-c-logo"></i>
             <span>Ub<i class="md md-album"></i>ld</span>
           </router-link>
@@ -53,7 +53,7 @@
                 class="menu-arrow"></span></a>
               <ul class="list-unstyled">
                 <li>
-                  <router-link to="/" target="_blank">数据指挥中心平台</router-link>
+                  <router-link to="/command-center">数据指挥中心平台</router-link>
                 </li>
               </ul>
             </li>
