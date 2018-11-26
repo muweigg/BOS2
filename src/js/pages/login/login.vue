@@ -75,9 +75,6 @@
         // rememberMe: false,
       }
     },
-    mounted () {
-      console.log(this.$store.state.isLogged);
-    },
     methods: {
       async login () {
         this.disabled = true;
