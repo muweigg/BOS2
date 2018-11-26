@@ -21,8 +21,13 @@
       <!-- Button mobile view to collapse sidebar menu -->
       <nav class="navbar-custom">
 
-        <b-dd text="张三" right class="list-inline float-right mt-3">
+
+        <!--<b-dd text="张三" right class="list-inline float-right mt-3">
           <b-dd-item @click="logout">LOGOUT</b-dd-item>
+        </b-dd>-->
+
+        <b-dd text="张三" right class="float-right mt-3" no-caret>
+          <b-dd-item @click="logout"><i class="md md-settings-power"></i> LOGOUT</b-dd-item>
         </b-dd>
 
         <ul class="list-inline menu-left mb-0">
