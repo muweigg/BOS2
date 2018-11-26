@@ -230,6 +230,23 @@
       </template>
     </b-modal>
 
+    <b-modal id="save-template-modal" title="导出指标设定" ref="saveTemplateModal">
+      <div class="row">
+        <div class="col-12">
+
+          <div class="form-group form-inline">
+            <label>我的模板：</label>
+            <input type="text" class="form-control">
+          </div>
+
+        </div>
+      </div>
+      <template slot="modal-footer">
+        <b-btn @click="$refs.saveTemplateModal.hide()">取消</b-btn>
+        <b-btn variant="primary">生成表格</b-btn>
+      </template>
+    </b-modal>
+
   </div>
 </template>
 

@@ -14,20 +14,26 @@
 
             <div class="form-group ">
               <div class="col-12">
-                <input class="form-control" type="text" required="" placeholder="Username">
+                <input class="form-control" type="text" required="" placeholder="Username"
+                       :disabled="disabled"
+                       v-model="username">
               </div>
             </div>
 
             <div class="form-group">
               <div class="col-12">
-                <input class="form-control" type="password" required="" placeholder="Password">
+                <input class="form-control" type="password" required="" placeholder="Password"
+                       :disabled="disabled"
+                       v-model="password">
               </div>
             </div>
 
             <div class="form-group ">
               <div class="col-12">
                 <div class="checkbox checkbox-primary">
-                  <input id="checkbox-signup" type="checkbox">
+                  <input id="checkbox-signup" type="checkbox"
+                         :disabled="disabled"
+                         v-model="rememberMe">
                   <label for="checkbox-signup">
                     Remember me
                   </label>
@@ -39,6 +45,7 @@
             <div class="form-group text-center m-t-40">
               <div class="col-12">
                 <button class="btn btn-pink btn-block text-uppercase waves-effect waves-light"
+                        :disabled="disabled"
                         @click="login">Log In
                 </button>
               </div>
@@ -54,15 +61,32 @@
 
 <script>
   import {LOGGED} from '../../store/mutation-types'
+  import api from '../../api'
+
   export default {
     name: 'login',
     data () {
       return {
-
+        username: 'admin',
+        password: '123123',
+        disabled: false,
+        rememberMe: false,
       }
     },
     methods: {
-      login () {
+      async login () {
+        this.disabled = true;
+
+        const resp = await api.login({
+          username: this.username,
+          password: this.password,
+        }).catch(e => this.disabled = false);
+
+        if (!resp.data) {
+          this.disabled = false;
+          return;
+        }
+
         this.$store.commit(LOGGED);
         const path = this.$store.state.toURL;
         this.$router.push((path));
