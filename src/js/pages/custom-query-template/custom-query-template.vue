@@ -299,10 +299,36 @@
         </div>
       </div>
       <template slot="modal-footer">
-        <b-btn variant="primary">生成表格</b-btn>
+        <b-btn variant="primary" v-b-modal.generate-table-modal>生成表格</b-btn>
       </template>
     </b-modal>
 
+    <b-modal id="generate-table-modal" size="lg" title="生成表格" hide-footer ref="generateTableModal">
+      <div class="row">
+        <div class="col-12">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>工号</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>工资</th>
+                <th>是否转正</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="i in 10">
+                <td>{{ i }}</td>
+                <td>女</td>
+                <td>20</td>
+                <td>5,000</td>
+                <td>是</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </b-modal>
   </div>
 </template>
 
