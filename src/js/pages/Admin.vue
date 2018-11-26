@@ -21,6 +21,10 @@
       <!-- Button mobile view to collapse sidebar menu -->
       <nav class="navbar-custom">
 
+        <b-dd text="张三" right class="list-inline float-right mt-3">
+          <b-dd-item @click="logout">LOGOUT</b-dd-item>
+        </b-dd>
+
         <ul class="list-inline menu-left mb-0">
           <li class="float-left">
             <button class="button-menu-mobile open-left waves-light waves-effect">
@@ -127,6 +131,8 @@
 </template>
 
 <script>
+  import {LOGGED_OUT} from '../store/mutation-types'
+
   const loadScript = (id, url, scope) => {
     let script = document.querySelector(`#${id}`);
     if (script) $(script).remove();
@@ -142,7 +148,12 @@
     mounted() {
       loadScript('bapp', './assets/js/common/ubold/jquery.app.js', 'body');
     },
-    methods: {}
+    methods: {
+      logout () {
+        this.$store.commit(LOGGED_OUT);
+        this.$router.push('/');
+      }
+    }
   }
 </script>
 

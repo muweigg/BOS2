@@ -16,6 +16,7 @@
               <div class="col-12">
                 <input class="form-control" type="text" required="" placeholder="Username"
                        :disabled="disabled"
+                       @keypress.enter="login"
                        v-model="username">
               </div>
             </div>
@@ -24,11 +25,12 @@
               <div class="col-12">
                 <input class="form-control" type="password" required="" placeholder="Password"
                        :disabled="disabled"
+                       @keypress.enter="login"
                        v-model="password">
               </div>
             </div>
 
-            <div class="form-group ">
+            <div class="form-group">
               <div class="col-12">
                 <div class="checkbox checkbox-primary">
                   <input id="checkbox-signup" type="checkbox"
