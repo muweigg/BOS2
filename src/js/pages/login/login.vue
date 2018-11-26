@@ -72,7 +72,7 @@
         username: 'admin',
         password: '123123',
         disabled: false,
-        rememberMe: false,
+        // rememberMe: false,
       }
     },
     methods: {
