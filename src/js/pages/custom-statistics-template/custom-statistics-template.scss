@@ -1,3 +1,57 @@
 .custom-statistics-template {
 
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin: 5px 0;
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  strong {
+    font-size: 32px;
+  }
+
+  .params-select-area {
+
+    .form-group {
+
+      input {
+        width: 80px;
+        margin: 0 10px;
+      }
+    }
+
+    ul {
+
+      li {
+        display: inline-block;
+        margin-right: 20px;
+        transition: color .1s linear;
+
+        &.active {
+          color: #ff0000;
+        }
+      }
+    }
+  }
+
+  .create-expression {
+
+    strong {
+      display: inline-block;
+      width: 50px;
+      text-align: justify;
+    }
+  }
+
+  /deep/ .custom-control-label {
+    padding-left: 25px !important;
+  }
 }
