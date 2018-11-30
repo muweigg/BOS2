@@ -1,0 +1,49 @@
+.custom-query-result {
+
+  .tools {
+    margin-bottom: 20px;
+  }
+
+  .tips {
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  /deep/ .submenu {
+    position: relative;
+
+    &:after {
+      display: block;
+      content: " ";
+      float: right;
+      width: 0;
+      height: 0;
+      border-color: transparent;
+      border-style: solid;
+      //border-width: 5px 0 5px 5px;
+      //border-left-color: #ccc;
+      border-width: 5px 5px 5px 0;
+      border-right-color: #ccc;
+      margin-top: 5px;
+      margin-right: -10px;
+    }
+
+    > div {
+      display: none;
+      position: absolute;
+      top: -6px;
+
+      &.pull-left {
+        float: none;
+        left: -100%;
+        //border-radius: 6px 0 6px 6px;
+        border-radius: 6px;
+      }
+    }
+
+    &:hover > div {
+      display: block;
+    }
+  }
+}

@@ -302,7 +302,7 @@
               查询条件自定义
               <div class="pull-right">
                 <button class="btn btn-secondary" data-toggle="modal" data-target=".create-template">保存模板</button>
-                <button class="btn btn-primary">查询数据</button>
+                <router-link to="./custom-query-result" tag="button" class="btn btn-primary">查询数据</router-link>
               </div>
             </h4>
           </div>
