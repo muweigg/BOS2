@@ -63,6 +63,11 @@
                 class="menu-arrow"></span></a>
               <ul class="list-unstyled">
                 <li>
+                  <router-link tag="li" to="./custom-form" active-class="active">
+                    <a href="javascript:">自建表单管理</a>
+                  </router-link>
+                </li>
+                <li>
                   <router-link tag="li" to="./custom-query-template" active-class="active">
                     <a href="javascript:">自定义查询模板</a>
                   </router-link>

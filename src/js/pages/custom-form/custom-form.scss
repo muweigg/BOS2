@@ -1,0 +1,74 @@
+.custom-form {
+
+  .filter {
+
+    .form-group {
+      margin: 5px 0 5px 10px;
+    }
+
+    input {
+      max-width: 120px;
+
+      &[type=date] {
+        max-width: 160px;
+      }
+    }
+
+    select {
+      max-width: 150px;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      margin: 5px 10px 5px 0;
+
+      &:nth-last-of-type(1) {
+        margin-left: 0;
+      }
+
+      i {
+        font-size: 24px;
+      }
+    }
+  }
+
+  table {
+
+    td {
+
+      a {
+        margin: 0 4px;
+      }
+    }
+  }
+
+  /deep/ .modal-dialog.modal-lg {
+    max-width: 1400px;
+  }
+
+  .fields {
+
+    th {
+      white-space: nowrap;
+    }
+
+    td {
+      text-align: center;
+      vertical-align: middle;
+
+      .form-control {
+        width: 80px;
+      }
+
+      .custom-select {
+        width: 100%;
+      }
+
+      /deep/ .custom-control {
+        padding-left: 0 !important;
+      }
+    }
+  }
+
+}
