@@ -34,6 +34,12 @@ import DifferentContrast from '../pages/different-contrast/different-contrast.vu
 // 综合数据查询
 import IntegratedDataQuery from '../pages/integrated-data-query/integrated-data-query.vue'
 
+// 综合数据查询
+import EnterNetwork from '../pages/enter-network/enter-network.vue'
+
+// 综合数据查询
+import ExitNetwork from '../pages/exit-network/exit-network.vue'
+
 // 自建表单管理
 import CustomForm from '../pages/custom-form/custom-form.vue'
 
@@ -69,6 +75,8 @@ const enterpriseDataQuery = {path: 'enterprise-data-query', component: Enterpris
 const industryDataQuery = {path: 'industry-data-query', component: IndustryDataQuery};
 const sameContrast = {path: 'same-contrast', component: SameContrast};
 const differentContrast = {path: 'different-contrast', component: DifferentContrast};
+const enterNetwork = {path: 'enter-network', component: EnterNetwork};
+const exitNetwork = {path: 'exit-network', component: ExitNetwork};
 
 const integratedDataQuery = {path: 'integrated-data-query', component: IntegratedDataQuery};
 const customQueryResult = {path: 'custom-query-result', component: CustomQueryResult};
@@ -90,6 +98,8 @@ const admin = {
     industryDataQuery,
     sameContrast,
     differentContrast,
+    enterNetwork,
+    exitNetwork,
 
     integratedDataQuery,
     customQueryResult,

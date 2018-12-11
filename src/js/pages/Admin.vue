@@ -74,7 +74,7 @@
                 </li>
                 <li>
                   <router-link tag="li" to="./document-uploader" active-class="active">
-                    <a href="javascript:">只能文档转换上传</a>
+                    <a href="javascript:">智能文档转换上传</a>
                   </router-link>
                 </li>
                 <li>
@@ -104,6 +104,12 @@
                 </router-link>
                 <router-link tag="li" to="./enterprise-data-query" active-class="active">
                   <a href="javascript:">企业数据查询</a>
+                </router-link>
+                <router-link tag="li" to="./enter-network" active-class="active">
+                  <a href="javascript:">新入网企业记录</a>
+                </router-link>
+                <router-link tag="li" to="./exit-network" active-class="active">
+                  <a href="javascript:">退网企业记录</a>
                 </router-link>
               </ul>
             </li>
