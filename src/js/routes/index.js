@@ -70,6 +70,12 @@ import CustomReportTemplate from '../pages/custom-report-template/custom-report-
 // 创建模板
 import CreateTemplate from '../pages/create-template/create-template.vue'
 
+// 资讯配置
+import InformationConfiguration from '../pages/information-configuration/information-configuration.vue'
+
+// 访问记录查询
+import AccessRecordQuery from '../pages/access-record-query/access-record-query.vue'
+
 const login = {path: '/', component: Login};
 
 const commandCenter = {path: '/command-center', component: CommandCenter, beforeEnter};
@@ -94,6 +100,9 @@ const customStatisticsTemplate = {path: 'custom-statistics-template', component:
 const customReportTemplate = {path: 'custom-report-template', component: CustomReportTemplate};
 const createTemplate = {path: 'create-template', component: CreateTemplate};
 
+const informationConfiguration = {path: 'information-configuration', component: InformationConfiguration};
+const accessRecordQuery = {path: 'access-record-query', component: AccessRecordQuery};
+
 const admin = {
   path: '/admin',
   component: Admin,
@@ -116,7 +125,10 @@ const admin = {
     customQueryTemplate,
     customStatisticsTemplate,
     customReportTemplate,
-    createTemplate
+    createTemplate,
+
+    informationConfiguration,
+    accessRecordQuery,
   ],
   beforeEnter
 };

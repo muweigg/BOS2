@@ -117,6 +117,19 @@
               </ul>
             </li>
 
+            <li class="has_sub">
+              <a href="javascript:void(0);" class="waves-effect"><i class="ti-home"></i> <span> 系统管理平台 </span> <span
+                class="menu-arrow"></span></a>
+              <ul class="list-unstyled">
+                <router-link tag="li" to="./information-configuration" active-class="active">
+                  <a href="javascript:">资讯配置</a>
+                </router-link>
+                <router-link tag="li" to="./access-record-query" active-class="active">
+                  <a href="javascript:">访问记录查询</a>
+                </router-link>
+              </ul>
+            </li>
+
           </ul>
           <div class="clearfix"></div>
         </div>
