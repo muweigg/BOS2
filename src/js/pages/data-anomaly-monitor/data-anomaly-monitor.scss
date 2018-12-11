@@ -1,0 +1,38 @@
+.data-anomaly-monitor {
+
+  .header-title {
+    font-size: 14px;
+  }
+
+  .list-title {
+    padding: 0 20px;
+  }
+
+  .card {
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        margin-bottom: 10px;
+
+        &:nth-last-of-type(1) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .card-body {
+      max-height: 250px;
+      flex-basis: 250px;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+
+  /deep/ .modal-dialog.modal-xl {
+    max-width: 1200px;
+  }
+}

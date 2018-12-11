@@ -111,6 +111,9 @@
                 <router-link tag="li" to="./exit-network" active-class="active">
                   <a href="javascript:">退网企业记录</a>
                 </router-link>
+                <router-link tag="li" to="./data-anomaly-monitor" active-class="active">
+                  <a href="javascript:">数据异常监测记录</a>
+                </router-link>
               </ul>
             </li>
 

@@ -34,11 +34,14 @@ import DifferentContrast from '../pages/different-contrast/different-contrast.vu
 // 综合数据查询
 import IntegratedDataQuery from '../pages/integrated-data-query/integrated-data-query.vue'
 
-// 综合数据查询
+// 新入网企业记录
 import EnterNetwork from '../pages/enter-network/enter-network.vue'
 
-// 综合数据查询
+// 退网企业记录
 import ExitNetwork from '../pages/exit-network/exit-network.vue'
+
+// 数据异常监测记录
+import DataAnomalyMonitor from '../pages/data-anomaly-monitor/data-anomaly-monitor.vue'
 
 // 自建表单管理
 import CustomForm from '../pages/custom-form/custom-form.vue'
@@ -77,6 +80,7 @@ const sameContrast = {path: 'same-contrast', component: SameContrast};
 const differentContrast = {path: 'different-contrast', component: DifferentContrast};
 const enterNetwork = {path: 'enter-network', component: EnterNetwork};
 const exitNetwork = {path: 'exit-network', component: ExitNetwork};
+const dataAnomalyMonitor = {path: 'data-anomaly-monitor', component: DataAnomalyMonitor};
 
 const integratedDataQuery = {path: 'integrated-data-query', component: IntegratedDataQuery};
 const customQueryResult = {path: 'custom-query-result', component: CustomQueryResult};
@@ -100,6 +104,7 @@ const admin = {
     differentContrast,
     enterNetwork,
     exitNetwork,
+    dataAnomalyMonitor,
 
     integratedDataQuery,
     customQueryResult,
