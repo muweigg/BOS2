@@ -68,6 +68,16 @@
                   </router-link>
                 </li>
                 <li>
+                  <router-link tag="li" to="./form-uploader" active-class="active">
+                    <a href="javascript:">表单上传</a>
+                  </router-link>
+                </li>
+                <li>
+                  <router-link tag="li" to="./document-uploader" active-class="active">
+                    <a href="javascript:">只能文档转换上传</a>
+                  </router-link>
+                </li>
+                <li>
                   <router-link tag="li" to="./custom-query-template" active-class="active">
                     <a href="javascript:">自定义查询模板</a>
                   </router-link>

@@ -40,6 +40,12 @@ import CustomForm from '../pages/custom-form/custom-form.vue'
 // 表单数据库
 import FormDatabase from '../pages/form-database/form-database.vue'
 
+// 表单数据库
+import FormUploader from '../pages/form-uploader/form-uploader.vue'
+
+// 表单数据库
+import DocumentUploader from '../pages/document-uploader/document-uploader.vue'
+
 // 自定义查询结果
 import CustomQueryResult from '../pages/custom-query-result/custom-query-result.vue'
 
@@ -69,6 +75,8 @@ const customQueryResult = {path: 'custom-query-result', component: CustomQueryRe
 
 const customForm = {path: 'custom-form', component: CustomForm};
 const formDatabase = {path: 'form-database', component: FormDatabase};
+const formUploader = {path: 'form-uploader', component: FormUploader};
+const documentUploader = {path: 'document-uploader', component: DocumentUploader};
 const customQueryTemplate = {path: 'custom-query-template', component: CustomQueryTemplate};
 const customStatisticsTemplate = {path: 'custom-statistics-template', component: CustomStatisticsTemplate};
 const customReportTemplate = {path: 'custom-report-template', component: CustomReportTemplate};
@@ -88,6 +96,8 @@ const admin = {
 
     customForm,
     formDatabase,
+    formUploader,
+    documentUploader,
     customQueryTemplate,
     customStatisticsTemplate,
     customReportTemplate,
